@@ -1,0 +1,26 @@
+.paginado{
+    margin: 20px 0px;
+}
+
+.list{
+    list-style: none;
+    text-align: center;
+}
+
+.li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.btn{
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    background:  #4c5baf;
+    text-decoration: none;
+    font-family: 'Macondo', cursive;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
