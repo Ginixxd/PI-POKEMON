@@ -114,7 +114,7 @@ export default function Home () {
                 </div>
                 <div>
                 {
-                    currentPokes && currentPokes.map((poke) => {
+                    currentPokes.length ? currentPokes.map((poke) => {
                         return (
                             <div className={Style.container}>
                                 <Link className= {Style.qqq} to = {'/home/' + poke.id} >
@@ -123,7 +123,9 @@ export default function Home () {
                             </div>
 
                         )
-                    })
+                    }):
+                    <img src= {'https://pa1.narvii.com/6344/b0d7343a693332df0a3eb017b5d104fa1d0e6350_hq.gif'} alt="img not found" />
+                
                 }
                 </div>
             </div>

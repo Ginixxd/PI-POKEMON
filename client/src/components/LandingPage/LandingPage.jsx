@@ -4,8 +4,7 @@ import Style from './LandingPage.module.css'
 
 export default function LandingPage(){
     return(
-        <div className = {Style.landing}>
-            <img className = {Style.img} src={''} alt="" />
+        <div className={Style.landing}>
             <h1>Welcome!</h1>
             <Link to = '/home' >
                 <button>Ingresar</button>

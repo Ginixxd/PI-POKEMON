@@ -1,12 +1,13 @@
 .landing{
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    position: relative;
-}
-
-.img{
-    width: 100%;
-    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2016/08/14/14/58/pokemon-1593048__340.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

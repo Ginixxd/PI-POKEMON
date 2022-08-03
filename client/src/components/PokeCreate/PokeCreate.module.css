@@ -6,6 +6,15 @@
     position: relative;
     left: 10px;
 }
+.inpE{
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    position: relative;
+    left: 10px;
+    border-color: red;
+}
 
 .inp1{
     width: 200px;
@@ -14,6 +23,15 @@
     box-sizing: border-box;
     position: relative;
     left: 25px;
+}
+.inp1E{
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    position: relative;
+    left: 25px;
+    border-color: red;
 }
 
 .inp2{
@@ -24,6 +42,15 @@
     position: relative;
     right: 15px;
 }
+.inp2E{
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    position: relative;
+    right: 15px;
+    border-color: red;
+}
 
 .inp3{
     width: 200px;
@@ -32,6 +59,15 @@
     box-sizing: border-box;
     position: relative;
     right: 20px;
+}
+.inp3E{
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    position: relative;
+    right: 20px;
+    border-color: red;
 }
 
 .inp4{
@@ -42,6 +78,15 @@
     position: relative;
     right: 12px;
 }
+.inp4E{
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    position: relative;
+    right: 12px;
+    border-color: red;
+}
 .inp5{
     width: 200px;
     padding: 12px 20px;
@@ -51,6 +96,15 @@
     right: 12px;
 }
 
+.inp5E{
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    position: relative;
+    right: 12px;
+    border-color: red;
+}
 .inp6{
     width: 200px;
     padding: 12px 20px;
@@ -59,6 +113,15 @@
     position: relative;
     right: 17px;
 }
+.inp6E{
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    position: relative;
+    right: 17px;
+    border-color: red;
+}
 .inp7{
     width: 200px;
     padding: 12px 20px;
@@ -66,6 +129,15 @@
     box-sizing: border-box;
     position: relative;
     left: 14px;
+}
+.inp7E{
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    position: relative;
+    left: 14px;
+    border-color: red;
 }
 
 .text{

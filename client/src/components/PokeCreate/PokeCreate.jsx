@@ -78,6 +78,8 @@ export default function PokeCreate () {
         types: []
     });
 
+
+
     const [errors, setErrors] = useState({})
 
     useEffect(() => {
@@ -101,9 +103,15 @@ export default function PokeCreate () {
             types: [...input.types, e.target.value]
         })
     };
+
+
      
     function handleSubmit (e) {
         e.preventDefault();
+        setErrors(validate(input))
+        if (Object.keys(errors).length > 0) {
+            alert ('nop nop')
+        }
         dispatch(postPokemon(input))
         alert('Pokemon Creado con exito')
         setInput({
@@ -126,26 +134,26 @@ export default function PokeCreate () {
             <h1>Create your own pokemon!</h1>
             <form onSubmit={e => handleSubmit(e)}>
                 <div>
-                    <label className ={Style.text}>Nombre: </label>
+                    <label className ={Style.text}>Name: </label>
                     <input 
                     type="text"
                     value = {input.name}
                     name = 'name'
                     onChange = {handleChange}
-                    className = {Style.inp}
+                    className = {errors.name ? Style.inpE : Style.inp}
                      />
                      {errors.name && (
                         <p className= {Style.error}>{errors.name}</p>
                      )}
                 </div>
                 <div>
-                    <label className ={Style.text}>Vida: </label>
+                    <label className ={Style.text}>Hp: </label>
                     <input 
                     type="number" 
                     value = {input.hp}
                     name = 'hp'
                     onChange = {handleChange}
-                    className = {Style.inp1}
+                    className = { errors.hp ? Style.inp1E : Style.inp1}
                     />
                     {errors.hp && (
                         <p className= {Style.error}>{errors.hp}</p>
@@ -158,7 +166,7 @@ export default function PokeCreate () {
                     value = {input.attack}
                     name = 'attack'
                     onChange = {handleChange}
-                    className = {Style.inp2}
+                    className = { errors.attack ? Style.inp2E : Style.inp2}
                     />
                     {errors.attack && (
                         <p className= {Style.error}>{errors.attack}</p>
@@ -171,7 +179,7 @@ export default function PokeCreate () {
                     value = {input.defense}
                     name = 'defense'
                     onChange = {handleChange}
-                    className = {Style.inp3}
+                    className = { errors.defense ? Style.inp3E : Style.inp3}
                     />
                     {errors.defense && (
                         <p className= {Style.error}>{errors.defense}</p>
@@ -184,7 +192,7 @@ export default function PokeCreate () {
                     value = {input.speed}
                     name = 'speed'
                     onChange = {handleChange}
-                    className = {Style.inp4}
+                    className = { errors.speed ? Style.inp4E : Style.inp4}
                     />
                     {errors.speed && (
                         <p className= {Style.error}>{errors.speed}</p>
@@ -197,7 +205,7 @@ export default function PokeCreate () {
                     value = {input.height}
                     name = 'height'
                     onChange = {handleChange}
-                    className = {Style.inp5}
+                    className = { errors.height ? Style.inp5E : Style.inp5}
                     />
                     {errors.height && (
                         <p className= {Style.error}>{errors.height}</p>
@@ -210,7 +218,7 @@ export default function PokeCreate () {
                     value = {input.weight}
                     name = 'weight'
                     onChange = {handleChange}
-                    className = {Style.inp6}
+                    className = { errors.weight ? Style.inp6E : Style.inp6}
                     />
                     {errors.weight && (
                         <p className= {Style.error}>{errors.weight}</p>
@@ -236,11 +244,14 @@ export default function PokeCreate () {
                         )
                         })
                     }
+                    {errors.types && (
+                        <p className= {Style.error}>{errors.types}</p>
+                     )}
                      </select>
                      </div>
                 <ul><li className= {Style.text1}>{input.types.map(el => el?.charAt(0).toUpperCase() + el.slice(1) + ', ')}</li></ul>    
                 
-                    <button className={Style.btn1} type = 'submit'>{input.name + ' I choose you!'}</button>
+                    <button disabled = {errors.name || errors.weight || errors.height || errors.speed || errors.defense || errors.attack || errors.hp ? true : false} className={Style.btn1} type = 'submit'>{input.name + ' I choose you!'}</button>
             </form>
         </div>
     )
