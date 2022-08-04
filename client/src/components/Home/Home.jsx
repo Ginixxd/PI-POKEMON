@@ -73,12 +73,12 @@ export default function Home () {
             <div>
             
                 <select className = {Style.select} onChange = {e => handleSort(e)}>
-                    <option value= 'asc'>Ascendente</option>
-                    <option value= 'desc'>Descendente</option>
+                    <option value= 'asc'>A to Z</option>
+                    <option value= 'desc'>Z to A</option>
                 </select>
                 <select className = {Style.select1} onChange = {e => handleSortNum(e)}>
-                    <option value="mayor"> +Power </option>
-                    <option value="menor"> -Power </option>
+                    <option value="mayor"> Powerfull </option>
+                    <option value="menor"> Weak </option>
                 </select>
                 <select className = {Style.select2} onChange = {e => handleFilterType(e)}>
                     <option value="todos">All</option>

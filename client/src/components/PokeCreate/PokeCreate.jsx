@@ -48,9 +48,6 @@ function validate (input) {
     if (input.weight > 100 || input.weight < 0){
         errors.weight = 'Weight points should be between 0 and 100'
     }
-    if (input.types.length > 2){
-        errors.types = 'AAAAAAAAAA'
-    }
 
     return errors
 } 
@@ -108,10 +105,6 @@ export default function PokeCreate () {
      
     function handleSubmit (e) {
         e.preventDefault();
-        setErrors(validate(input))
-        if (Object.keys(errors).length > 0) {
-            alert ('nop nop')
-        }
         dispatch(postPokemon(input))
         alert('Pokemon Creado con exito')
         setInput({
@@ -244,9 +237,6 @@ export default function PokeCreate () {
                         )
                         })
                     }
-                    {errors.types && (
-                        <p className= {Style.error}>{errors.types}</p>
-                     )}
                      </select>
                      </div>
                 <ul><li className= {Style.text1}>{input.types.map(el => el?.charAt(0).toUpperCase() + el.slice(1) + ', ')}</li></ul>    

@@ -11,3 +11,25 @@
     align-items: center;
     flex-direction: column;
 }
+
+.btn{
+    background-color: #4c5baf; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    font-size: 16px;
+    border-radius: 5px;
+    position: relative;
+    font-family: 'Macondo', cursive;
+    cursor: pointer;
+}
+
+.text{
+    position: relative;
+    bottom: 180px;
+    font-size: 800%;
+    font-family: 'Macondo', cursive;
+}
