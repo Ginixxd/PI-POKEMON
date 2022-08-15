@@ -95,10 +95,14 @@ export default function PokeCreate () {
     };
 
     function handleSelect (e) {
+        if(!input.types.includes(e.target.value)){
         setInput({
             ...input,
             types: [...input.types, e.target.value]
         })
+    } else {
+        return 
+    }
     };
 
 
@@ -232,14 +236,14 @@ export default function PokeCreate () {
                     <select className={Style.select} onChange = {e => handleSelect(e)}>
                     {
                         types && types.map(el => {
-                        return (                            
+                        return (
                             <option value={el} > {el?.charAt(0).toUpperCase() + el.slice(1)}</option>
                         )
                         })
                     }
                      </select>
                      </div>
-                <ul><li className= {Style.text1}>{input.types.map(el => el?.charAt(0).toUpperCase() + el.slice(1) + ', ')}</li></ul>    
+                <ul><li className= {Style.text1}>{ input.types.map(el => el?.charAt(0).toUpperCase() + el.slice(1) + ', ')}</li></ul>    
                 
                     <button disabled = {errors.name || errors.weight || errors.height || errors.speed || errors.defense || errors.attack || errors.hp ? true : false} className={Style.btn1} type = 'submit'>{input.name + ' I choose you!'}</button>
             </form>

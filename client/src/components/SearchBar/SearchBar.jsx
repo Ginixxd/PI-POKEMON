@@ -5,7 +5,7 @@ import { getNamePokemons } from '../../actions';
 import Style from './SearchBar.module.css'
 import { Link } from 'react-router-dom';
 
-export default function SearchBar () {
+export default function SearchBar ({setCurrentPage}) {
     const dispatch =  useDispatch();
 
     const [name, setName] = useState('');
@@ -18,7 +18,9 @@ export default function SearchBar () {
     function handleSubmit (e) {
         e.preventDefault();
         dispatch (getNamePokemons(name))
+        setCurrentPage(1)
     }
+
 
     return (
         <div className = {Style.header}>

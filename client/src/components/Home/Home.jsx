@@ -42,6 +42,7 @@ export default function Home () {
 
     function handleFilterType (e) {
         dispatch(filterPokemonsByType(e.target.value))
+        setCurrentPage(1)
     };
 
     function handleSort (e) {
@@ -60,11 +61,12 @@ export default function Home () {
 
     function handleFilterCreated (e) {
         dispatch(filterCreated(e.target.value))
+        setCurrentPage(1)
     }
 
     return (
         <div>
-            <SearchBar/>
+            <SearchBar setCurrentPage={setCurrentPage}/>
             
             <h1>Welcome to your own pokedex!</h1>
             <button className = {Style.btn} onClick={e => {handleClick(e)}}>

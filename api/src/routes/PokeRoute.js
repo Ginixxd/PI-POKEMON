@@ -3,6 +3,23 @@ const {Pokemon, Types} = require('../db')
 const {getAllPokemon} = require('../controllers/getPokemon')
 const router = Router();
 
+
+// router.get('/', async (req,res) => {
+//     const {weight} = req.query
+//     const pokes = await getAllPokemon()
+//     try {
+//         if (weight){
+//             const pesoPoke = pokes.filter(e => e.weight == weight)
+//             pesoPoke.length ? 
+//             res.status(200).json(pesoPoke) :
+//             res.status(404).send('Pokemon not found')
+//         }
+//     } catch (e) {
+//         console.log(e)
+//     }
+// })
+
+
 router.get('/', async (req, res) => {
     const {name} = req.query;
     const allPoke = await getAllPokemon();
@@ -36,6 +53,7 @@ router.get('/:id', async (req, res) => {
         console.log(error);
     }
 })
+
 
 router.post('/', async (req, res) => {
     const {name, hp, attack, defense, speed, height, weight, sprite, types} = req.body;
